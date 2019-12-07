@@ -14,7 +14,7 @@ var pressPower = 1;
 function redPlus(){
   if (red >= 100){
     document.getElementById("orangeappear").style.display = "block";
-    document.getElementById("redup").innerHTML = red / 100;
+    document.getElementById("redup").innerHTML = Math.floor(red/100);
   }
   red += pressPower;
   document.getElementById("red").innerHTML = red;
@@ -22,8 +22,8 @@ function redPlus(){
 
 function redUp(){
   if (red >= 100){
-    orange += red/100;
-    red *= 0;
+    orange += Math.floor(red/100);
+    red %= 100;
     document.getElementById("redup").innerHTML = 0;
     document.getElementById("orange").innerHTML = orange;
     document.getElementById("red").innerHTML = red;
@@ -43,6 +43,7 @@ function refresh () {
     //under
     if (red >= 100){
       document.getElementById("orangeappear").style.display = "block";
+      document.getElementByClass("box").style.flex = "50%";
       document.getElementById("redup").innerHTML = red/100;
     }
     document.getElementById("orange").innerHTML = orange;
