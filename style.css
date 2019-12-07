@@ -9,8 +9,21 @@ html body{
 ::selection{
   background: rgba(255, 0, 0, 0);
 }
+.upbut{
+  margin-top: 200px;
+  padding-top: 10px;
+}
+.up{
+  background: rgba(0, 0, 0, 0.25);
+  height:10%;
+  position: static;
+  width:100%;
+  top:10px;
+  padding-bottom: 50px;
+}
 .box{
   flex:auto;
+  overflow: hidden;
   height:100%;
   text-align: center;
   align-items: center;
@@ -23,10 +36,14 @@ html body{
   background: #ff3838;
 
 }
+.orange{
+  background: #ff9f1a;
+  display: none;
+}
 .game {
   display: flex;
   height: 700px;
-  flex-direction: column;
+  flex-direction: row;
 }
 .pink{
   padding-top: 2%;
@@ -35,6 +52,11 @@ html body{
   text-align: center;
 }
 #pink{
+
+  font-size: 40px;
+font-family: 'Raleway', sans-serif;
+}
+#redup{
 
   font-size: 40px;
 font-family: 'Raleway', sans-serif;
