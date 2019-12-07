@@ -34,7 +34,7 @@ function redUp(){
 var last = Date.now()
 var goal = last + 1000;
 var last1 = Date.now()
-var goal1 = last + 1000;
+var goal1 = last + 50;
 
 function refresh () {
   last1 = Date.now();
