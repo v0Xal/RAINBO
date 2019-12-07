@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:900|Roboto|Sulphur+Point:300,400,700&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width">
 	<title>RAINBO</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
@@ -12,14 +13,16 @@
 	<script src="game.js">
 	</script>
   <div class="pink">
-    <h3>You Have <span id="pink">0</span>
+		<div class="pinktext">
+    <h3>You Have <span id="pink"><b>0</b></span> pink</h3>
+	</div>
   </div>
    <div class="game">
-      <div class="redbox">
+      <div class="box red" onclick="redPlus();">
       <div class="click">
       <h1 id="red" class="howmuch">0</h1>
       </div>
-      </div>
+		</div>
   </div>
   </body>
 </html>

@@ -1,9 +1,46 @@
 html body{
   width: 100%;
   height: 100%;
+  transition: 2s;
+  margin: 0px;
+  overflow: hidden;
+  font-family: 'Sulphur Point', sans-serif;
+}
+::selection{
+  background: rgba(255, 0, 0, 0);
+}
+.box{
+  flex:auto;
+  height:100%;
+  text-align: center;
+  align-items: center;
+}
+.howmuch{
+  font-size: 200px;
+  color:rgba(0, 0, 0, 0.25);
+}
+.red{
+  background: #ff3838;
 
 }
-
 .game {
+  display: flex;
+  height: 700px;
+  flex-direction: column;
+}
+.pink{
+  padding-top: 2%;
+  display: flex;
+  background: pink;
+  text-align: center;
+}
+#pink{
 
+  font-size: 40px;
+font-family: 'Raleway', sans-serif;
+}
+.pinktext {
+  margin-left: 45%;
+  align-items: center;
+  display:inline;
 }
