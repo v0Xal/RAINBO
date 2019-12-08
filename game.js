@@ -10,7 +10,7 @@ var pink = 0;
 //Pink Upgrades
 var pressPower = 1;
 var upCost = 100;
-
+var maxPurple = 1000;
 
 
 
@@ -98,7 +98,10 @@ function refresh () {
   last1 = Date.now();
   if (last1 >= goal1) {
     goal1 = goal1 + 50;
-    //under
+    if (purple > maxPurple){
+      purple = maxPurple;
+    }
+    //CostShow
     if (red >= upCost){
       document.getElementById("orangebox").style.display = "block";
     }
