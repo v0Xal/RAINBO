@@ -12,6 +12,7 @@
 <body>
 	<script src="game.js">
 	</script>
+	<div class="main">
   <div class="pink">
 		<div class="pinktext">
     <h3>You Have <span id="pink"><b>0</b></span> pink</h3>
@@ -19,20 +20,55 @@
   </div>
    <div class="game">
       <div class="box red" id="redbox">
-      <div class="click" onclick="redPlus();">
+  <div class="click" onclick="redPlus();">
       <h1 id="red" class="howmuch">0</h1>
 	</div>
-	<div class="up" onclick="redUp();">
+<div class="up" onclick="redUp();">
 	<h3 class="upbut">Gain <span id="redup"><b>0</b></span> orange</h3>
 </div>
 	</div>
 
-		<div class="box orange" id="orangeappear">
+		<div class="box orange" id="orangebox">
 		<div class="click">
 		<h1 id="orange" class="howmuch">0</h1>
 </div>
-	</div>
+<div class="up" onclick="orangeUp();">
+<h3 class="upbut">Gain <span id="orangeup"><b>0</b></span> Yellow</h3>
 </div>
-
+	</div>
+	<div class="box yellow" id="yellowbox">
+	<div class="click">
+	<h1 id="yellow" class="howmuch">0</h1>
+</div>
+ <div class="up" onclick="yellowUp();">
+<h3 class="upbut">Gain <span id="yellowup"><b>0</b></span> Green</h3>
+</div>
+</div>
+	<div class="box green" id="greenbox">
+		<div class="click">
+<h1 id="green" class="howmuch">0</h1>
+</div>
+ <div class="up" onclick="greenUp();">
+<h3 class="upbut">Gain <span id="greenup"><b>0</b></span> Blue</h3>
+</div>
+</div>
+<div class="box blue" id="bluebox">
+<div class="click">
+<h1 id="blue" class="howmuch">0</h1>
+</div>
+ <div class="up" onclick="blueUp();">
+<h3 class="upbut">Gain <span id="blueup"><b>0</b></span> Purple</h3>
+</div>
+</div>
+<div class="box purple" id="purplebox">
+	<div class="click">
+<h1 id="purple" class="howmuch">0</h1>
+</div>
+<div class="up" onclick="purpleUp();">
+<h3 class="upbut">Reset to gain <span id="purpleup"><b>0</b></span> Pink</h3>
+</div>
+</div>
+</div>
+</div>
   </body>
 </html>

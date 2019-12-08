@@ -40,6 +40,23 @@ html body{
   background: #ff9f1a;
   display: none;
 }
+.yellow{
+  background: #fff200;
+  display: none;
+}
+.green{
+  background: #3ae374;
+  display: none;
+}
+
+.blue{
+  background: #17c0eb;
+  display: none;
+}
+.purple{
+  background: #7158e2;
+  display: none;
+}
 .game {
   display: flex;
   height: 700px;
@@ -48,7 +65,8 @@ html body{
 .pink{
   padding-top: 2%;
   display: flex;
-  background: pink;
+  background: #e84393;
+  color: white;
   text-align: center;
 }
 #pink{
@@ -58,6 +76,27 @@ font-family: 'Raleway', sans-serif;
 }
 #redup{
 
+  font-size: 40px;
+font-family: 'Raleway', sans-serif;
+}
+#orangeup{
+
+  font-size: 40px;
+font-family: 'Raleway', sans-serif;
+}
+#yellowup {
+  font-size: 40px;
+font-family: 'Raleway', sans-serif;
+}
+#greenup{
+  font-size: 40px;
+font-family: 'Raleway', sans-serif;
+}
+#blueup{
+  font-size: 40px;
+font-family: 'Raleway', sans-serif;
+}
+#purpleup{
   font-size: 40px;
 font-family: 'Raleway', sans-serif;
 }
