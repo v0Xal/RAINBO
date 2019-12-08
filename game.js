@@ -1,3 +1,4 @@
+//COLORS
 var red = 0;
 var orange = 0;
 var yellow = 0;
@@ -6,8 +7,9 @@ var blue = 0;
 var purple = 0;
 var pink = 0;
 
+//Pink Upgrades
 var pressPower = 1;
-var unlocked = 0;
+var upCost = 100;
 
 
 
@@ -18,53 +20,53 @@ function redPlus(){
 }
 
 function redUp(){
-  if (red >= 100){
-    orange += Math.floor(red/100);
-    red %= 100;
+  if (red >= upCost){
+    orange += Math.floor(red/upCost);
+    red %= upCost;
     document.getElementById("redup").innerHTML = 0;
     document.getElementById("orange").innerHTML = orange;
     document.getElementById("red").innerHTML = red;
   }
 }
 function orangeUp(){
-  if (orange >= 100){
-    yellow += Math.floor(orange/100);
-    orange %= 100;
+  if (orange >= upCost){
+    yellow += Math.floor(orange/upCost);
+    orange %= upCost;
     document.getElementById("orangeup").innerHTML = 0;
     document.getElementById("orange").innerHTML = orange;
     document.getElementById("yellow").innerHTML = yellow;
   }
 }
 function yellowUp(){
-  if (yellow >= 100){
-    green += Math.floor(yellow/100);
-    yellow %= 100;
+  if (yellow >= upCost){
+    green += Math.floor(yellow/upCost);
+    yellow %= upCost;
     document.getElementById("orangeup").innerHTML = 0;
     document.getElementById("yellow").innerHTML = yellow;
     document.getElementById("green").innerHTML = green;
   }
 }
 function greenUp(){
-  if (green >= 100){
-    blue += Math.floor(green/100);
-    green %= 100;
+  if (green >= upCost){
+    blue += Math.floor(green/upCost);
+    green %= upCost;
     document.getElementById("greenup").innerHTML = 0;
     document.getElementById("blue").innerHTML = blue;
     document.getElementById("green").innerHTML = green;
   }
 }
 function blueUp(){
-  if (blue >= 100){
-    purple += Math.floor(blue/100);
-    blue %= 100;
+  if (blue >= upCost){
+    purple += Math.floor(blue/upCost);
+    blue %= upCost;
     document.getElementById("greenup").innerHTML = 0;
     document.getElementById("blue").innerHTML = blue;
     document.getElementById("purple").innerHTML = purple;
   }
 }
 function purpleUp(){
-  if (purple >= 100){
-    pink += Math.floor(purple/100);
+  if (purple >= upCost){
+    pink += Math.floor(purple/upCost);
     red = 0;
     orange = 0;
     yellow = 0;
@@ -97,28 +99,28 @@ function refresh () {
   if (last1 >= goal1) {
     goal1 = goal1 + 50;
     //under
-    if (red >= 100){
+    if (red >= upCost){
       document.getElementById("orangebox").style.display = "block";
-      document.getElementById("redup").innerHTML = Math.floor(red/100);
+      document.getElementById("redup").innerHTML = Math.floor(red/upCost);
     }
-    if (orange >= 100) {
+    if (orange >= upCost) {
         document.getElementById("yellowbox").style.display = "block";
-      document.getElementById("orangeup").innerHTML = Math.floor(orange/100);
+      document.getElementById("orangeup").innerHTML = Math.floor(orange/upCost);
     }
-    if (yellow >= 100) {
+    if (yellow >= upCost) {
         document.getElementById("greenbox").style.display = "block";
-      document.getElementById("yellowup").innerHTML = Math.floor(yellow/100);
+      document.getElementById("yellowup").innerHTML = Math.floor(yellow/upCost);
     }
-    if (green >= 100) {
+    if (green >= upCost) {
         document.getElementById("bluebox").style.display = "block";
-      document.getElementById("greenup").innerHTML = Math.floor(green/100);
+      document.getElementById("greenup").innerHTML = Math.floor(green/upCost);
     }
-    if (blue >= 100) {
+    if (blue >= upCost) {
         document.getElementById("purplebox").style.display = "block";
-      document.getElementById("blueup").innerHTML = Math.floor(blue/100);
+      document.getElementById("blueup").innerHTML = Math.floor(blue/upCost);
     }
-    if (purple >= 100) {
-      document.getElementById("purpleup").innerHTML = Math.floor(purple/100);
+    if (purple >= upCost) {
+      document.getElementById("purpleup").innerHTML = Math.floor(purple/upCost);
     }
 
     document.getElementById("red").innerHTML = red;
