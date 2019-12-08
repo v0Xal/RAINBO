@@ -10,6 +10,7 @@ var pink = 0;
 //Pink Upgrades
 var pressPower = 1;
 var upCost = 100;
+var upCostCost = 1;
 var maxPurple = 1000;
 
 
@@ -87,6 +88,19 @@ document.getElementById("blueup").innerHTML = 0;
 document.getElementById("purpleup").innerHTML = 0;
   }
 }
+
+function upCostUp {
+  if (upCost > 10) {
+    if (pink >= upCostCost) {
+      upCost -= 10;
+      upCostCost *= 10;
+    }
+  }
+}
+
+
+
+
 
 
 var last = Date.now()

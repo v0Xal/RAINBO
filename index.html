@@ -12,13 +12,13 @@
 <body>
 	<script src="game.js">
 	</script>
-	<div class="main">
-  <div class="pink">
+	<div id="main">
+  <div class="pink" onclick="">
     <h3 class="pinktext">You Have <span id="pink"><b>0</b></span> pink</h3>
   </div>
    <div class="game">
-      <div class="box red" id="redbox">
-  <div class="click" onclick="redPlus();">
+      <div class="box red" id="redbox" onclick="redPlus();">
+  <div class="click" >
       <h1 id="red" class="howmuch">0</h1>
 	</div>
 <div class="up" onclick="redUp();">
@@ -67,6 +67,11 @@
 </div>
 </div>
 </div>
+</div>
+<!-- PINK UPGRADES -->
+<div id="pinkupgrade">
+<button id="upcostupgrade"></button>
+<button></button>
 </div>
   </body>
 </html>
