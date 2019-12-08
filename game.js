@@ -101,7 +101,7 @@ function goToUpgrades {
   document.getElementById("main").style.display = "none";
   document.getElementById("pinkupgrade").style.display = "block";
 }
-
+//CAN YOU PUSE NOW!!!
 
 
 
