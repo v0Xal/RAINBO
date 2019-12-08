@@ -89,7 +89,7 @@ document.getElementById("purpleup").innerHTML = 0;
   }
 }
 
-function upCostUp {
+function upCostUp () {
   if (upCost > 10) {
     if (pink >= upCostCost) {
       upCost -= 10;
@@ -97,7 +97,7 @@ function upCostUp {
     }
   }
 }
-function goToUpgrades {
+function goToUpgrades () {
   document.getElementById("main").style.display = "none";
   document.getElementById("pinkupgrade").style.display = "block";
 }
