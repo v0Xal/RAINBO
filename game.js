@@ -97,7 +97,10 @@ function upCostUp {
     }
   }
 }
-
+function goToUpgrades {
+  document.getElementById("main").style.display = "none";
+  document.getElementById("pinkupgrade").style.display = "block";
+}
 
 
 
