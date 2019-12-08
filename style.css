@@ -63,7 +63,8 @@ html body{
   flex-direction: row;
 }
 .pink{
-  display: flex;
+  padding-bottom: 10px;
+  display: block;
   background: #e84393;
   color: white;
   text-align: center;
@@ -100,7 +101,8 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Raleway', sans-serif;
 }
 .pinktext {
-  margin-left: 45%;
+  padding-top:10px;
+  bottom: 5px;
   align-items: center;
   display:inline;
 }
