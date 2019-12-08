@@ -101,19 +101,18 @@ function refresh () {
     //under
     if (red >= upCost){
       document.getElementById("orangebox").style.display = "block";
-      document.getElementById("redup").innerHTML = Math.floor(red/upCost);
     }
     if (orange >= upCost) {
         document.getElementById("yellowbox").style.display = "block";
-      document.getElementById("orangeup").innerHTML = Math.floor(orange/upCost);
+
     }
     if (yellow >= upCost) {
         document.getElementById("greenbox").style.display = "block";
-      document.getElementById("yellowup").innerHTML = Math.floor(yellow/upCost);
+
     }
     if (green >= upCost) {
         document.getElementById("bluebox").style.display = "block";
-      document.getElementById("greenup").innerHTML = Math.floor(green/upCost);
+
     }
     if (blue >= upCost) {
         document.getElementById("purplebox").style.display = "block";
@@ -122,7 +121,14 @@ function refresh () {
     if (purple >= upCost) {
       document.getElementById("purpleup").innerHTML = Math.floor(purple/upCost);
     }
-
+//Upgrade
+    document.getElementById("redup").innerHTML = Math.floor(red/upCost);
+    document.getElementById("orangeup").innerHTML = Math.floor(orange/upCost);
+    document.getElementById("yellowup").innerHTML = Math.floor(yellow/upCost);
+    document.getElementById("greenup").innerHTML = Math.floor(green/upCost);
+    document.getElementById("blueup").innerHTML = Math.floor(blue/upCost);
+    document.getElementById("purpleup").innerHTML = Math.floor(purple/upCost);
+//Colors
     document.getElementById("red").innerHTML = red;
     document.getElementById("orange").innerHTML = orange;
     document.getElementById("yellow").innerHTML = yellow;
