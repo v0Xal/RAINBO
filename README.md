@@ -1,1 +1,1 @@
-# RAINBO
+# ![R](https://img.shields.io/badge/-R-%23ff3838) ![A](https://img.shields.io/badge/-A-%23ff9f1a) ![I](https://img.shields.io/badge/-I-%23fff200) ![N](https://img.shields.io/badge/-N-%233ae374) ![B](https://img.shields.io/badge/-B-%2317c0eb) ![O](https://img.shields.io/badge/-O-%237158e2)
