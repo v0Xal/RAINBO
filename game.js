@@ -8,24 +8,27 @@ var purple = 0;
 var pink = 0;
 
 //Pink Upgrades
-var pressPower = 1;
+var clickPower = 1;
 var upCost = 100;
 var upCostCost = 1;
 var maxPurpleCost = 10;
 var maxPurple = 1000;
+
+
 
 //AD NOTATIONS
 const standard = new ADNotations.StandardNotation();
 const scientific = new ADNotations.ScientificNotation();
 
 
-
-
+red = localStorage.getItem('red');
+orange = localStorage.getItem('orange');
+yellow = localStorage.getItem('yellow');
 
 
 
 function redPlus(){
-  red += pressPower;
+  red += clickPower;
   document.getElementById("red").innerHTML = standard.format(red);
 }
 
@@ -93,7 +96,12 @@ document.getElementById("blueup").innerHTML = 0;
 document.getElementById("purpleup").innerHTML = 0;
   }
 }
-
+function upClickPower(){
+  if(pink >= clickPower*2) {
+  pink -= clickPower * 2;
+  clickPower * 2
+  }
+}
 
 
 
@@ -155,6 +163,11 @@ function refresh () {
     } else {
       document.getElementById("maxpurpleupgrade").style.background = "#ff2020";
     }
+    if (pink >= clickPower * 2) {
+    document.getElementById("clickpowerupgrade").style.background = "#4CAF50";
+  } else {
+    document.getElementById("clickpowerupgrade").style.background = "#ff2020";
+  }
 
     //Overflow
     if (purple > maxPurple){
@@ -205,6 +218,9 @@ function refresh () {
     document.getElementById("maxpurpleupgradecost").innerHTML = standard.format(maxPurpleCost, 2, 0);
     document.getElementById("maxpurple").innerHTML = standard.format(maxPurple);
     document.getElementById("nextmaxpurple").innerHTML = standard.format(maxPurple + 1000);
+    document.getElementById("clickpowerupgradecost").innerHTML = standard.format(clickPower*2);
+    document.getElementById("clickpower").innerHTML = standard.format(clickPower);
+    document.getElementById("clickpowerx2").innerHTML = standard.format(clickPower * 2);
   }
 }
 setInterval(refresh, 50);
@@ -231,6 +247,11 @@ function autosave () {
     window.localStorage.clear();
     window.localStorage.setItem("red",red);
     window.localStorage.setItem("orange",orange);
+    window.localStorage.setItem("yellow",yellow);
+    window.localStorage.setItem("green",green);
+    window.localStorage.setItem("blue",blue);
+    window.localStorage.setItem("purple",purple);
+    window.localStorage.setItem("pink",pink);
     console.log("Cool! Saved game")
   }
 }
