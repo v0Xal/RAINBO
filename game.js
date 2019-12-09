@@ -190,11 +190,12 @@ setInterval(gameLoop, 1000);
 function autosave () {
   last2 = Date.now();
   if (last2 >= goal2) {
-    goal2 = goal2 + 30000;
+    goal2 = goal2 + 3000;
     //under
     window.localStorage.clear();
-    window.localStorage.setItem(red,orange,yellow,green,blue,purple,pink,upCost,upCostCost,pressPower,maxPurple);
+    window.localStorage.setItem("red",red);
+    window.localStorage.setItem("orange",orange);
     console.log("Cool! Saved game")
   }
 }
-setInterval(gameLoop, 30000);
+setInterval(gameLoop, 3000);
