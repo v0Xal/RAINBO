@@ -13,11 +13,18 @@ var upCost = 100;
 var upCostCost = 1;
 var maxPurple = 1000;
 
+//AD NOTATIONS
+const standard = new ADNotations.StandardNotation();
+
+
+
+
+
 
 
 function redPlus(){
   red += pressPower;
-  document.getElementById("red").innerHTML = red;
+  document.getElementById("red").innerHTML = standard.format(red);
 }
 
 function redUp(){
@@ -52,8 +59,6 @@ function greenUp(){
     blue += Math.floor(green/upCost);
     green %= upCost;
     document.getElementById("greenup").innerHTML = 0;
-    document.getElementById("blue").innerHTML = blue;
-    document.getElementById("green").innerHTML = green;
   }
 }
 function blueUp(){
@@ -61,8 +66,6 @@ function blueUp(){
     purple += Math.floor(blue/upCost);
     blue %= upCost;
     document.getElementById("greenup").innerHTML = 0;
-    document.getElementById("blue").innerHTML = blue;
-    document.getElementById("purple").innerHTML = purple;
   }
 }
 function purpleUp(){
@@ -113,6 +116,8 @@ var last = Date.now()
 var goal = last + 1000;
 var last1 = Date.now()
 var goal1 = last + 50;
+var last2 = Date.now()
+var goal2 = last + 50;
 
 function refresh () {
   last1 = Date.now();
@@ -139,29 +144,29 @@ function refresh () {
     }
     if (blue >= upCost) {
         document.getElementById("purplebox").style.display = "block";
-      document.getElementById("blueup").innerHTML = Math.floor(blue/upCost);
+      document.getElementById("blueup").innerHTML = standard.format(Math.floor(blue/upCost));
     }
     if (purple >= upCost) {
-      document.getElementById("purpleup").innerHTML = Math.floor(purple/upCost);
+      document.getElementById("purpleup").innerHTML = standard.format(Math.floor(purple/upCost));
     }
 //Upgrade
-    document.getElementById("redup").innerHTML = Math.floor(red/upCost);
-    document.getElementById("orangeup").innerHTML = Math.floor(orange/upCost);
+    document.getElementById("redup").innerHTML = standard.format(Math.floor(red/upCost));
+    document.getElementById("orangeup").innerHTML = standard.format(Math.floor(orange/upCost));
     document.getElementById("yellowup").innerHTML = Math.floor(yellow/upCost);
     document.getElementById("greenup").innerHTML = Math.floor(green/upCost);
     document.getElementById("blueup").innerHTML = Math.floor(blue/upCost);
     document.getElementById("purpleup").innerHTML = Math.floor(purple/upCost);
 //Colors
-    document.getElementById("red").innerHTML = red;
-    document.getElementById("orange").innerHTML = orange;
-    document.getElementById("yellow").innerHTML = yellow;
-    document.getElementById("green").innerHTML = green;
-    document.getElementById("blue").innerHTML = blue;
-    document.getElementById("purple").innerHTML = purple;
-    document.getElementById("pink").innerHTML = pink;
-    document.getElementById("pink2").innerHTML = pink;
+    document.getElementById("red").innerHTML = standard.format(red);
+    document.getElementById("orange").innerHTML = standard.format(orange);
+    document.getElementById("yellow").innerHTML = standard.format(yellow);
+    document.getElementById("green").innerHTML = standard.format(green);
+    document.getElementById("blue").innerHTML = standard.format(blue);
+    document.getElementById("purple").innerHTML = standard.format(purple);
+    document.getElementById("pink").innerHTML = standard.format(pink);
+    document.getElementById("pink2").innerHTML = standard.format(pink);
 //Upgrades
-    document.getElementById("upcostupgradecost").innerHTML = upCostCost;
+    document.getElementById("upcostupgradecost").innerHTML = standard.format(upCostCost);
     document.getElementById("upcost").innerHTML = upCost;
     document.getElementById("nextupcost").innerHTML = upCost-10;
   }
@@ -182,3 +187,14 @@ function gameLoop () {
   }
 }
 setInterval(gameLoop, 1000);
+function autosave () {
+  last2 = Date.now();
+  if (last2 >= goal2) {
+    goal2 = goal2 + 30000;
+    //under
+    window.localStorage.clear();
+    window.localStorage.setItem(red,orange,yellow,green,blue,purple,pink,upCost,upCostCost,pressPower,maxPurple);
+    console.log("Cool! Saved game")
+  }
+}
+setInterval(gameLoop, 30000);
