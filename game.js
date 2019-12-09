@@ -11,6 +11,7 @@ var pink = 0;
 var pressPower = 1;
 var upCost = 100;
 var upCostCost = 1;
+var maxPurpleCost = 10;
 var maxPurple = 1000;
 
 //AD NOTATIONS
@@ -93,6 +94,9 @@ document.getElementById("purpleup").innerHTML = 0;
   }
 }
 
+
+
+
 function upCostUp () {
   if (upCost > 10) {
     if (pink >= upCostCost) {
@@ -102,6 +106,17 @@ function upCostUp () {
     }
   }
 }
+function upMaxPurple () {
+  if (pink >= maxPurpleCost) {
+    maxPurple += 1000;
+    pink -= maxPurpleCost;
+    maxPurpleCost += 10
+  }
+}
+
+
+
+
 function goToUpgrades () {
   document.getElementById("main").style.display = "none";
   document.getElementById("pinkupgrade").style.display = "block";
@@ -124,6 +139,24 @@ function refresh () {
   last1 = Date.now();
   if (last1 >= goal1) {
     goal1 = goal1 + 50;
+    //Black Button
+    if (upCost <= 10) {
+      document.getElementById("upcostupgrade").style.background = "#000000";
+      document.getElementById("upcostupgradecostbox").style.display = "none";
+      document.getElementById("nextupcost").style.display = "none";
+      document.getElementById("upcostarrow").style.display = "none";
+    }else if (pink >= upCostCost) {
+      document.getElementById("upcostupgrade").style.background = "#4CAF50";
+    } else {
+      document.getElementById("upcostupgrade").style.background = "#ff2020";
+    }
+      if (pink >= maxPurpleCost) {
+      document.getElementById("maxpurpleupgrade").style.background = "#4CAF50";
+    } else {
+      document.getElementById("maxpurpleupgrade").style.background = "#ff2020";
+    }
+
+    //Overflow
     if (purple > maxPurple){
       purple = maxPurple;
     }
@@ -145,7 +178,6 @@ function refresh () {
     }
     if (blue >= upCost) {
         document.getElementById("purplebox").style.display = "block";
-      document.getElementById("blueup").innerHTML = standard.format(Math.floor(blue/upCost));
     }
     if (purple >= upCost) {
       document.getElementById("purpleup").innerHTML = standard.format(Math.floor(purple/upCost));
@@ -153,10 +185,10 @@ function refresh () {
 //Upgrade
     document.getElementById("redup").innerHTML = standard.format(Math.floor(red/upCost));
     document.getElementById("orangeup").innerHTML = standard.format(Math.floor(orange/upCost));
-    document.getElementById("yellowup").innerHTML = Math.floor(yellow/upCost);
-    document.getElementById("greenup").innerHTML = Math.floor(green/upCost);
-    document.getElementById("blueup").innerHTML = Math.floor(blue/upCost);
-    document.getElementById("purpleup").innerHTML = Math.floor(purple/upCost);
+    document.getElementById("yellowup").innerHTML = standard.format(Math.floor(yellow/upCost));
+    document.getElementById("greenup").innerHTML = standard.format(Math.floor(green/upCost));
+    document.getElementById("blueup").innerHTML = standard.format(Math.floor(blue/upCost));
+    document.getElementById("purpleup").innerHTML = standard.format(Math.floor(purple/upCost));
 //Colors
     document.getElementById("red").innerHTML = standard.format(red);
     document.getElementById("orange").innerHTML = standard.format(orange);
@@ -170,6 +202,9 @@ function refresh () {
     document.getElementById("upcostupgradecost").innerHTML = standard.format(upCostCost);
     document.getElementById("upcost").innerHTML = upCost;
     document.getElementById("nextupcost").innerHTML = upCost-10;
+    document.getElementById("maxpurpleupgradecost").innerHTML = standard.format(maxPurpleCost, 2, 0);
+    document.getElementById("maxpurple").innerHTML = standard.format(maxPurple);
+    document.getElementById("nextmaxpurple").innerHTML = standard.format(maxPurple + 1000);
   }
 }
 setInterval(refresh, 50);
