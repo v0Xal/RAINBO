@@ -93,6 +93,7 @@ function upCostUp () {
   if (upCost > 10) {
     if (pink >= upCostCost) {
       upCost -= 10;
+      pink -= upCostCost;
       upCostCost *= 10;
     }
   }
@@ -101,7 +102,10 @@ function goToUpgrades () {
   document.getElementById("main").style.display = "none";
   document.getElementById("pinkupgrade").style.display = "block";
 }
-
+function goToColors (){
+  document.getElementById("main").style.display = "block";
+  document.getElementById("pinkupgrade").style.display = "none";
+}
 
 
 
@@ -155,6 +159,11 @@ function refresh () {
     document.getElementById("blue").innerHTML = blue;
     document.getElementById("purple").innerHTML = purple;
     document.getElementById("pink").innerHTML = pink;
+    document.getElementById("pink2").innerHTML = pink;
+//Upgrades
+    document.getElementById("upcostupgradecost").innerHTML = upCostCost;
+    document.getElementById("upcost").innerHTML = upCost;
+    document.getElementById("nextupcost").innerHTML = upCost-10;
   }
 }
 setInterval(refresh, 50);
