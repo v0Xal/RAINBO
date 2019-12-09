@@ -15,6 +15,7 @@ var maxPurple = 1000;
 
 //AD NOTATIONS
 const standard = new ADNotations.StandardNotation();
+const scientific = new ADNotations.ScientificNotation();
 
 
 
