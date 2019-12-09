@@ -3,6 +3,7 @@ html body{
   height: 100%;
   transition: 200ms;
   margin: 0px;
+  background: #e84393;
   overflow: hidden;
   font-family: 'Sulphur Point', sans-serif;
 }
@@ -58,11 +59,7 @@ html body{
   background: #7158e2;
   display: none;
 }
-.game {
-  display: flex;
-  height: 700px;
-  flex-direction: row;
-}
+
 .pink{
   padding-bottom: 10px;
   display: block;
@@ -70,10 +67,19 @@ html body{
   color: white;
   text-align: center;
 }
+.game {
+  display: flex;
+  height: 100em;
+  flex-direction: row;
+}
 #pink{
 
   font-size: 40px;
 font-family: 'Raleway', sans-serif;
+}
+#pink2{
+font-family: 'Raleway', sans-serif;
+  font-size: 40px;
 }
 #redup{
 
@@ -108,6 +114,8 @@ font-family: 'Raleway', sans-serif;
   display:inline;
 }
 #pinkupgrade {
+  background: #e84393;
   display:none;
+  height:100%;
 }
 /*plsload*/

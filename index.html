@@ -10,6 +10,8 @@
 </head>
 
 <body>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/break_infinity.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@antimatter-dimensions/notations"></script>
 	<script src="game.js">
 	</script>
 	<div id="main">
@@ -70,8 +72,10 @@
 </div>
 <!-- PINK UPGRADES -->
 <div id="pinkupgrade">
-<button id="upcostupgrade" onclick="upCostUp();">UpCostUp</button>
-<button></button>
+	<div class="pink" onclick="goToColors();">
+		<h3 class="pinktext">You Have <span id="pink2"><b>0</b></span> pink</h3>
+	</div>
+<button id="upcostupgrade" onclick="upCostUp();"><b>UpCostUp</b> (<span id="upcostupgradecost">1</span> pink) <br> <span id="upcost">100</span> 	&rarr; <span id="nextupcost">90</span></button>
 </div>
   </body>
 </html>
