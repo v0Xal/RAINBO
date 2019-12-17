@@ -99,7 +99,7 @@ document.getElementById("purpleup").innerHTML = 0;
 function upClickPower(){
   if(pink >= clickPower*2) {
   pink -= clickPower * 2;
-  clickPower * 2
+  clickPower *= 2
   }
 }
 
